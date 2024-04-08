@@ -1,102 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		/* Your styles here! */
-		
-	</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    article {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      background-color: rgb(63, 247, 188);
+			font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .image-container {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+
+    .image {
+      width: 200px;
+      height: auto;
+    }
+
+    .text-container {
+      flex: 1 1 auto;
+    }
+
+    .features-list {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+
+    .features-list div {
+      margin-right: 10px;
+      background-color: rgb(244, 229, 208);
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 767px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      article {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .image {
+        width: 100%;
+        max-width: none;
+      }
+
+      .text-container {
+        text-align: left;
+				width: 100%;
+      }
+
+      .features-list {
+        justify-content: flex-end;
+        margin-top: 10px;
+				width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <section class="main">
+    <article>
+      <div class="image-container">
+        <img class="image" src="images/transamerica-redwood-park.jpg" />
+      </div>
+      <div class="text-container">
+        <h1>Transamerica Redwood Park</h1>
+        <p>600 Montgomery St San Francisco, CA</p>
+        <p class="hours">Mon - Fri 7am - 5:30pm</p>
+        <p class="features-label">Features:</p>
+        <div class="features-list">
+          <div>🌳</div>
+          <div>🖼️</div>
+        </div>
+      </div>
+    </article>
 
-	<!--  -->
-	<section class="main">
-		<article>
-			<div>
-				<img class="image" src="images/transamerica-redwood-park.jpg" />
-			</div>
-			<div class="features">
-				<h1>Transamerica Redwood Park</h1>
-				<p>600 Montgomery St San Francisco, CA</p>
-				<p class="hours">Mon - Fri 7am - 5:30pm</p>
-				<p class="features-label">Features:</p>
-				<div class="features-list">
-					<div>🌳</div>
-					<div>🖼️</div>
-				</div>
-			</div>
-		</article>
+    <article>
+      <div class="image-container">
+        <img class="image" src="images/50-california-st.jpg" />
+      </div>
+      <div class="text-container">
+        <h1>50 California Street</h1>
+        <p>50 California St San Francisco, CA 94111</p>
+        <p class="hours">Mon - Fri 7am - 5:30pm</p>
+        <p class="features-label">Features:</p>
+        <div class="features-list">
+          <div>🌳</div>
+          <div>🚽</div>
+          <div>☕️</div>
+        </div>
+      </div>
+    </article>
 
-		<!--  -->
-		<article>
-			<div>
-				<img class="image" src="images/50-california-st.jpg" />
-			</div>
-			<div class="features">
-				<h1>50 California Street</h1>
-				<p>50 California St San Francisco, CA 94111</p>
-				<p class="hours">Mon - Fri 7am - 5:30pm</p>
-				<p class="features-label">Features:</p>
-				<div class="features-list">
-					<div>🌳</div>
-					<div>🚽</div>
-					<div>☕️</div>
-				</div>
-			</div>
-		</article>
+    <article>
+      <div class="image-container">
+        <img class="image" src="images/empire-park.jpg" />
+      </div>
+      <div class="text-container">
+        <h1>Empire Park</h1>
+        <p>648 Commercial St San Francisco, CA</p>
+        <p class="hours">Mon - Fri 7am - 5:30pm</p>
+        <p class="features-label">Features:</p>
+        <div class="features-list">
+          <div>🌳</div>
+          <div>🖼️</div>
+        </div>
+      </div>
+    </article>
 
-		<!--  -->
-		<article>
-			<div>
-				<img class="image" src="images/empire-park.jpg" />
-			</div>
-			<div class="features">
-				<h1>Empire Park</h1>
-				<p>648 Commercial St San Francisco, CA</p>
-				<p class="hours">Mon - Fri 7am - 5:30pm</p>
-				<p class="features-label">Features:</p>
-				<div class="features-list">
-					<div>🌳</div>
-					<div>🖼️</div>
-				</div>
-			</div>
-		</article>
+    <article>
+      <div class="image-container">
+        <img class="image" src="images/embarcadero-center.jpg" />
+      </div>
+      <div class="text-container">
+        <h1>Embarcadero Center Walkways</h1>
+        <p>275 Battery St San Francisco, CA 94111</p>
+        <p class="hours">Mon - Fri 7am - 5:30pm</p>
+        <p class="features-label">Features:</p>
+        <div class="features-list">
+          <div>🌳</div>
+          <div>🚽</div>
+          <div>☕️</div>
+        </div>
+      </div>
+    </article>
 
-		<article>
-			<div>
-				<img class="image" src="images/embarcadero-center.jpg" />
-			</div>
-			<div class="features">
-				<h1>Embarcadero Center Walkways</h1>
-				<p>275 Battery St San Francisco, CA 94111</p>
-				<p class="hours">Mon - Fri 7am - 5:30pm</p>
-				<p class="features-label">Features:</p>
-				<div class="features-list">
-					<div>🌳</div>
-					<div>🚽</div>
-					<div>☕️</div>
-				</div>
-			</div>
-		</article>
-
-		<article>
-			<div>
-				<img class="image" src="images/343-sansome-roof-garden.jpg" />
-			</div>
-			<div class="features">
-				<h1>343 Sansome Roof Garden</h1>
-				<p>343 Sansome St San Francisco, CA</p>
-				<p class="hours">Mon - Fri 10am - 5pm</p>
-				<p class="features-label">Features:</p>
-				<div class="features-list">
-					<div>🌳</div>
-				</div>
-			</div>
-		</article>
-	</section>
-	
+    <article>
+      <div class="image-container">
+        <img class="image" src="images/343-sansome-roof-garden.jpg" />
+      </div>
+      <div class="text-container">
+        <h1>343 Sansome Roof Garden</h1>
+        <p>343 Sansome St San Francisco, CA</p>
+        <p class="hours">Mon - Fri 10am - 5pm</p>
+        <p class="features-label">Features:</p>
+        <div class="features-list">
+          <div>🌳</div>
+        </div>
+      </div>
+    </article>
+  </section>
 </body>
 </html>
